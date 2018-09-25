@@ -21,7 +21,12 @@ public class GreetingController {
     @RequestMapping("/greeting")
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
 	logger.error("Get a greeting!");
-	logger.error("OMG new event!");
+	int a = 100;
+	int b = 1;
+	for (int i=0; i<a; i++) {
+            b++; 
+        }
+	logger.error("What! OMG new event!");
         return new Greeting(counter.incrementAndGet(),
                             String.format(template, name), "Greate commit!");
     }
