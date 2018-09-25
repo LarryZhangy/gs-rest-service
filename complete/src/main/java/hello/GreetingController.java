@@ -22,6 +22,6 @@ public class GreetingController {
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
 	logger.error("Get a greeting!");
         return new Greeting(counter.incrementAndGet(),
-                            String.format(template, name));
+                            String.format(template, name), "Greate commit!");
     }
 }
